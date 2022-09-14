@@ -5,13 +5,7 @@ import json
 from dotenv import load_dotenv, find_dotenv
 
 
-
-env_path = find_dotenv() # automatic find
-load_dotenv()
-CREDENTIAL_KEY = os.getenv('Credential')
-credentials = service_account.Credentials.from_service_account_info(json.loads(CREDENTIAL_KEY))
-#credentials = service_account.Credentials.from_service_account_file('/home/matt89code/code/Matt89code/The-Base/packagefunctions/google_credential.json')
-
+# loading credentials
 
 def classify(text):
     """Classify the input text into categories."""

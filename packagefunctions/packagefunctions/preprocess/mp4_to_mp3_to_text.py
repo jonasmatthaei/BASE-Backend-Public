@@ -3,12 +3,8 @@ from google.oauth2 import service_account
 from google.cloud import speech_v1 as speech
 from google.cloud import storage
 from dotenv import load_dotenv, find_dotenv
-env_path = find_dotenv() # automatic find
-load_dotenv()
-CREDENTIAL_KEY = os.getenv('Credential')
-credentials = service_account.Credentials.from_service_account_info(json.loads(CREDENTIAL_KEY))
 
-#credentials = service_account.Credentials.from_service_account_file('packagefunctions/google_credential.json')
+# loading credentials
 
 #upload to gcloud
 def upload_to_gcloud(mp3_location,bucket="the_base_user_inputs"):

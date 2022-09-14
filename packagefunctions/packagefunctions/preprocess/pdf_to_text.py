@@ -9,7 +9,7 @@ def pdf_to_text(content):
 
     extension = os.path.splitext(content)[1].strip(".")
 
-    convertapi.api_secret = '75pQjqAFVapX4kP2'
+    convertapi.api_secret = 'api key'
 
     result = convertapi.convert('txt', { 'File': content }, from_format = extension)
 

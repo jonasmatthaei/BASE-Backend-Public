@@ -1,7 +1,7 @@
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = "openai key"
 
 #get summary
 def summary_func(input_text, model="text-davinci-002", temperature=0.7, max_tokens=500):

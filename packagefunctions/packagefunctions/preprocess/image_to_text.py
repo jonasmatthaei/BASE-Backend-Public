@@ -6,17 +6,9 @@ import json
 from dotenv import load_dotenv, find_dotenv
 from google.cloud.vision_v1 import AnnotateImageResponse
 
-env_path = find_dotenv() # automatic find
-load_dotenv()
-CREDENTIAL_KEY = os.getenv('Credential')
-credentials = service_account.Credentials.from_service_account_info(json.loads(CREDENTIAL_KEY))
-
-
-
+# loading credentials
 def detect_document(content):
     """Detects document features in an image."""
-
-    credentials = service_account.Credentials.from_service_account_file('google_credential.json')
 
     client = vision.ImageAnnotatorClient(credentials = credentials)
 

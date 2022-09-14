@@ -35,6 +35,3 @@ def youtube_to_text(url):
     text_formatted = text_formatted.replace("\n", " ")
 
     return text_formatted
-    # print(text_formatted)
-
-# youtube_to_text('https://www.youtube.com/watch?v=Pram4CRHK6A')

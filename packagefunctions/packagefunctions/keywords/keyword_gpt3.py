@@ -3,7 +3,7 @@ import openai
 
 
 def get_keywords(text):
-    openai.api_key = "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"
+    openai.api_key = "openai key"
 
     response = openai.Completion.create(
       model="text-davinci-002",

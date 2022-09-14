@@ -5,12 +5,7 @@ import os
 import json
 from dotenv import load_dotenv, find_dotenv
 
-env_path = find_dotenv() # automatic find
-load_dotenv()
-CREDENTIAL_KEY = os.getenv('Credential')
-#credentials = service_account.Credentials.from_service_account_file('/home/matt89code/code/Matt89code/The-Base/packagefunctions/google_credential.json')
-credentials = service_account.Credentials.from_service_account_info(json.loads(CREDENTIAL_KEY))
-
+# Loading credentials
 
 def query_gbc(query):
     return pd.read_gbq(credentials=credentials,query=query)

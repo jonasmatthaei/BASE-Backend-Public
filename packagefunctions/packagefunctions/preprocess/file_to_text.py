@@ -9,18 +9,12 @@ from google.oauth2 import service_account
 from google.cloud.vision_v1 import AnnotateImageResponse
 from dotenv import load_dotenv, find_dotenv
 
-env_path = find_dotenv() # automatic find
-load_dotenv()
-CREDENTIAL_KEY = os.getenv('Credential')
-#credentials = service_account.Credentials.from_service_account_file('/home/matt89code/code/Matt89code/The-Base/packagefunctions/google_credential.json')
-credentials = service_account.Credentials.from_service_account_info(json.loads(CREDENTIAL_KEY))
-client = vision.ImageAnnotatorClient(credentials = credentials)
 
-# credentials = service_account.Credentials.from_service_account_file('packagefunctions/google_credential.json')
 
+# loading credentials
 def pdf_to_text(content,extension):
 
-    convertapi.api_secret = '75pQjqAFVapX4kP2'
+    convertapi.api_secret = 'api key'
 
     result = convertapi.convert('txt', { 'File': content }, from_format = extension)
 

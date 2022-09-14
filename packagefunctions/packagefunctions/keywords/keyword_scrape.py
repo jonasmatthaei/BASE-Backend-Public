@@ -6,7 +6,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 
 #last test
-openai.api_key = "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"
+openai.api_key = "openai key"
 
 def gpt3_curie(input_text, model="text-curie-001", temperature=0, max_tokens=250):
     response = openai.Completion.create(
